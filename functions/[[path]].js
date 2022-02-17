@@ -16,7 +16,7 @@ export async function onRequest(context) {
   // res = new Response(res.body, res);
   // Set cookie to enable persistent A/B sessions.
   // res.headers.append("Set-Cookie", `${NAME}=${group}; path=/`);
-  return url;
+  return new Response(`url: ${url}`);
 }
 
 // addEventListener("fetch", (e) => {
