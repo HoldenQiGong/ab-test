@@ -1,0 +1,22 @@
+name = "abtest"
+# type = "javascript" is required to use the `[build]` section
+type = "javascript"
+workers_dev = true
+account_id = ""
+route = ""
+zone_id = ""
+compatibility_date = "2022-02-17"
+
+[build.upload]
+# Upload the code directly from the src directory.
+dir = "functions"
+# The "modules" upload format is required for all projects that export a Durable Objects class
+format = "modules"
+main = "./abtest.js"
+
+[durable_objects]
+bindings = [{name = "AB_VARIANT_SWITCH", class_name = "ABVariantSwitch"}]
+
+[[migrations]]
+tag = "v1" # Should be unique for each entry
+new_classes = ["Counter"]
