@@ -12,11 +12,11 @@ export async function onRequest(context) {
   //   url.pathname = "/test" + url.pathname;
   // }
   // Reconstruct response to avoid immutability
-  let res = await fetch(url);
-  res = new Response(res.body, res);
+  // let res = await fetch(url);
+  // res = new Response(res.body, res);
   // Set cookie to enable persistent A/B sessions.
   // res.headers.append("Set-Cookie", `${NAME}=${group}; path=/`);
-  return res;
+  return url;
 }
 
 // addEventListener("fetch", (e) => {
