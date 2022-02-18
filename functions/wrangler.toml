@@ -6,9 +6,9 @@ account_id = "078a5f55b1012df45f460af4d5ab1e9a"
 compatibility_date = "2022-02-17"
 
 [build.upload]
-dir = "lib"
+dir = "./"
 format = "modules"
-main = "./abVariantSwitcher.mjs"
+main = "./abtest.js"
 
 [durable_objects]
 bindings = [{name = "AB_VARIANT_SWITCH", class_name = "ABVariantSwitch"}]
